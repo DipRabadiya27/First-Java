@@ -10,7 +10,7 @@ public class bubble {
         //bubble short
         for(int i=0; i<arr.length-1; i++){ // n-1
             System.out.println("Hear");
-            for (int j=0; j<arr.length-i-1; j++){ // 
+            for (int j=0; j<arr.length-i-1; j++){ //
                 if(arr[j] > arr[j+1]){
                     //swap
                     int temp = arr[j];
