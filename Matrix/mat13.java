@@ -8,5 +8,4 @@ public class mat13 {
         }
         System.out.println();
     }
-    
 }

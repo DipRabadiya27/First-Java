@@ -4,16 +4,17 @@ public class mat16 {
                 { 4, 10, 14 },
                 { 7, 11, 15 } };
 
-        int row = 0, col = mat[0].length - 1;
-        int value = 6;
-        while (row <= col) {
-            if (value == mat[row][col]) {
+        int row = mat.length, col = mat[0].length;
+        int r=0,c=col-1;
+        int value = 4;
+        while (r < row && c>=0) {
+            if (value == mat[r][c]) {
                 System.out.println("value is present");
                 return;
-            } else if (value < mat[row][col]) {
-                col--;
+            } else if (value < mat[r][c]) {
+                c--;
             } else {
-                row++;
+                r++;
             }
         }
         System.out.println("value not present");
