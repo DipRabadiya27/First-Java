@@ -9,7 +9,6 @@ public class O1 {
         System.out.println(s1.name + " " + s1.age + " " + s1.rNo);
 
         Student s2 = new Student("parth",17,20);
-
         System.out.println(s2.getname() + " " + s2.getage() + " " + s2.getrNo());
     }
 }
@@ -30,6 +29,7 @@ class Student{
         this.age=age;
         this.rNo=rNo;
     }
+    
 
     public String getname(){
         return name;
