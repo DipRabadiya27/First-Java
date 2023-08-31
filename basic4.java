@@ -59,21 +59,8 @@ class Student {
         Student max2 = stud[1];
         Student max3 = stud[2];
 
-        for (int i = 4; i < stud.length; i++) {
-            if (stud[i].Perc > max1.Perc) {
-                max3 = max2;
-                max2 = max1;
-                max1 = stud[i];
-            } else if (stud[i].Perc > max2.Perc && stud[i].Perc != max1.Perc) {
-                max3 = max2;
-                max2 = stud[i];
-            } else if (stud[i].Perc > max3.Perc && stud[i].Perc != max2.Per()) {
-                max3 = stud[i];
-            }
-        }
         System.out.println(max1.Perc + " " + max1.studName);
         System.out.println(max2.Perc + " " + max2.studName);
         System.out.println(max3.Perc + " " + max3.studName);
-
     }
 }

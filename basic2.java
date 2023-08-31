@@ -26,10 +26,10 @@ class Account{
     }
 
     public void calculateInterest(){
-        Total = balance + (interestRate*balance)/100;
+        this.balance = balance + (interestRate*balance)/100;
     }
 
     public void displayAccountDetails(){
-        System.out.println("accountNumber: "+ accountNumber + "\ncustName: "+ custName +"\nbalance: " +balance + "\ninterest with balance: " + Total);
+        System.out.println("accountNumber: "+ accountNumber + "\ncustName: "+ custName  + "\ninterest with balance: " + balance);
     }
 }
