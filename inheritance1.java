@@ -1,14 +1,13 @@
 public class inheritance1 {
     public static void main(String[] args) {
         Student s1=new Student(1,80,7,"Dip",22);
-        System.out.println(s1.getName());
+        System.out.println(s1.getNumber() + " " + s1.getPerc()+ " " + s1.getSem()+ " " + s1.getName()+ " " + s1.getAge());
         
-        Prof p1=new Prof("Maths", 217,"Abc", 40);
-        System.out.println(p1.getName());
-        System.out.println(p1.getSub());
+        // Prof p1=new Prof("Maths", 217,"Abc", 40);
+        // System.out.println(p1.getSub()+ " " + p1.getId()+ " " + p1.getAge()+ " "+ p1.getName());
 
-        Emp e1=new Emp(15000, "IT", "PPS", 001, "XYZ", 22);
-        System.out.println(e1.getSub());
+        // Emp e1=new Emp(15000, "IT", "PPS", 001, "XYZ", 22);
+        // System.out.println(e1.getSalary()+ " " + e1.getDep()+ " " +e1.getSub()+ " " + e1.getId()+ " " + e1.getAge()+ " "+ e1.getName());
     }
 }
 
@@ -39,16 +38,31 @@ class Person{
 }
 
 class Student extends Person {
-    private int rNo;
+    private int number;
     private double perc;
     private int sem;
 
-    public Student(int rNO,double perc,int sem,String name,int age){
+    public Student(int number,double perc,int sem,String name,int age){
         super(name,age);
-        this.rNo=rNo;
+        this.number=number;
         this.perc=perc;
         this.sem=sem;
     }
+    public int getNumber() {
+        return number;
+    }
+
+
+    public double getPerc() {
+        return perc;
+    }
+
+    public int getSem() {
+        return sem;
+    }
+
+    
+
 }
 
 class Prof extends Person{
@@ -71,6 +85,10 @@ class Prof extends Person{
 
     public String getSub() {
         return sub;
+    }
+
+    public int getId() {
+        return id;
     }
 }
 
