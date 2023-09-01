@@ -25,13 +25,13 @@ class Movie{
     private String studio;
     private String rating;
 
-    Movie(String title,String studio, String rating){
+    public Movie(String title,String studio, String rating){
         this.title=title;
         this.studio=studio;
         this.rating=rating;
     }
 
-    Movie(String title, String studio) {
+    public Movie(String title, String studio) {
         this.title = title;
         this.studio = studio;
         this.rating = "5 Star";
@@ -54,7 +54,6 @@ class Movie{
         }
         return result;
     }
-
 
 
     public String getTitle() {
