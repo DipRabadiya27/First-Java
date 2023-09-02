@@ -17,6 +17,7 @@ class Account{
     int accountNumber;
     String custName;
     int balance;
+    public String name;
 
     public void setAccountDetails(int accountNumber,String custName,int balance){
         this.accountNumber=accountNumber;
