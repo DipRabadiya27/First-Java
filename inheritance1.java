@@ -3,11 +3,11 @@ public class inheritance1 {
         Student s1=new Student(1,80,7,"Dip",22);
         System.out.println(s1.getNumber() + " " + s1.getPerc()+ " " + s1.getSem()+ " " + s1.getName()+ " " + s1.getAge());
         
-        // Prof p1=new Prof("Maths", 217,"Abc", 40);
-        // System.out.println(p1.getSub()+ " " + p1.getId()+ " " + p1.getAge()+ " "+ p1.getName());
+        Prof p1=new Prof("Maths", 217,"Abc", 40);
+        System.out.println(p1.getSub()+ " " + p1.getId()+ " " + p1.getAge()+ " "+ p1.getName());
 
-        // Emp e1=new Emp(15000, "IT", "PPS", 001, "XYZ", 22);
-        // System.out.println(e1.getSalary()+ " " + e1.getDep()+ " " +e1.getSub()+ " " + e1.getId()+ " " + e1.getAge()+ " "+ e1.getName());
+        Emp e1=new Emp(15000, "IT", "PPS", 001, "XYZ", 22);
+        System.out.println(e1.getSalary()+ " " + e1.getDep()+ " " +e1.getSub()+ " " + e1.getId()+ " " + e1.getAge()+ " "+ e1.getName());
     }
 }
 
