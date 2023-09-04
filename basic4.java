@@ -19,6 +19,7 @@ public class basic4 {
         // s5.calcualatePer();
         Student stud[]= {s1,s2,s3,s4,s5};
         Student.getTop3Student(stud);
+        int[] arr={1,2,3,4,5};
     }
 }
 
