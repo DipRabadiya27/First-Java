@@ -1,8 +1,12 @@
-import bank.*;
+import java.util.*;
+// import bank.*;
 public class oop1 {
     // public void area(){
     //     System.out.println("Display area");
     // }
+    /**
+     * 
+     */
     public static void main(String[] args) {
         Shape s1 = new Shape();
         s1.area();
@@ -14,8 +18,8 @@ public class oop1 {
         c1.area(2);
         // oop1 o1 = new oop1();
         // o1.area();
-        bank.Account Account1 = new bank.Account();
-        Account1.name = "Customer1";
+        // bank.Account Account1 = new bank.Account();
+        // Account1.name = "Customer1";
     }
 }
 
