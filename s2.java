@@ -4,7 +4,7 @@ public class s2 {
     public static void main(String[] args){
         //compare
         String name1 = "Dip";
-        String name2 = "dip";
+        String name2 = "Dip";
 
         //1 s1 > s2 : +ve value
         //1 s1 = s2 : 0

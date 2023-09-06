@@ -1,90 +1,107 @@
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class basic7{
+public class basic7 {
     public static void main(String[] args) {
-        Student10 s1=new Student10();
+        Student8 s1 = new Student8();
+        Student8 s2 = new Student8();
         s1.Show();
-        s1.Input();
-        Student10.TotalStudent();
-        System.out.println("Total marks: " + s1.TotalMarks());
-        System.out.println("Get Max: " + s1.getHighest());
-        System.out.println("Get Min: " + s1.getLowest());
-        System.out.println("Get Avg: " + s1.getAverage());
-        System.out.println("Get pass count: " + s1.getPassCount());
+        s1.input();
+        s2.input();
+
+        s1.Show();
+        s2.Show();
+        
+        Student8.TotalStudents();
+
+        System.out.println("Total Mark : "+s1.TotalMarks());
+        System.out.println("Total Mark : "+s2.TotalMarks());
+
+        System.out.println("Highest Mark of Subject : " + s1.getHighest());
+        System.out.println("Highest Mark of Subject : " + s2.getHighest());
+
+        System.out.println("Lowest Mark of Subject : "+s1.getLowest());
+        System.out.println("Lowest Mark of Subject : "+s2.getLowest());
+
+        System.out.println("average marks of student : "+s1.getAverage());
+        System.out.println("average marks of student : "+s2.getAverage());
+
+        System.out.println("A student is passed Subject : " + s1.getPassCount());
+        System.out.println("A student is passed Subject : " + s2.getPassCount());
     }
 }
 
-class Student10{
+class Student8{
     private static int unique;
-    private String name;
     private int rNo;
+    private String name;
     private int[] marks=new int[5];
 
-    Student10(){
-        this.name="";
-        this.rNo=unique += 1;
+    public Student8() {
+        Student8.unique += 1;
+        this.rNo=Student8.unique;
+        this.name=null;
         this.marks=marks;
     }
 
+    public void input() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a name");
+		this.name = sc.next();
+		for (int i = 0; i < marks.length; i++) {
+			System.out.println("Enter marks of subject "+(i+1));	
+			this.marks[i]=sc.nextInt();
+		}
+	}
+
     public void Show(){
-        System.out.println("rNO: " + this.rNo + "\nname: " + this.name + "\nmarks: " + Arrays.toString(marks));
+        System.out.println("Details of student");
+        System.out.println("RollNo : "+ this.rNo + ", \nName : " + this.name + ", \nMarks : " + Arrays.toString(this.marks));
     }
 
-    public static void TotalStudent(){
-        System.out.println("TotalStudent: " + unique);
+    public static void TotalStudents() {
+        System.out.println("Total Student: " + Student8.unique);
     }
 
-    public int TotalMarks(){
-        int sum=0;
-        for(int i=0;i<this.marks.length;i++){
-            sum+=marks[i];
+    public  int TotalMarks() {
+        int total = 0;
+        for (int i = 0; i < marks.length; i++) {
+            total += marks[i];
         }
-        return sum;
-    }
-
-    public void Input(){
-        Scanner sc = new Scanner (System.in );
-        System.out.print("\nEnter the student's Name:");
-        this.name=sc.nextLine();
-        for(int i=0;i<this.marks.length;i++){
-            System.out.print("subject " + (i+1) + ": ");
-            this.marks[i]=sc.nextInt();
-        }
+        return total;
     }
 
     public int getHighest(){
-        int max=0;
+        int max = Integer.MIN_VALUE;
         for(int i=0;i<marks.length;i++){
-            if(max<marks[i]){
-                max=marks[i];
+            if(max<this.marks[i]){
+                max=this.marks[i];
             }
         }
         return max;
     }
 
     public int getLowest(){
-        int min=Integer.MAX_VALUE;
-        for(int i=0;i<marks.length;i++){
-            if(min>marks[i]){
-                min=marks[i];
+        int min = Integer.MAX_VALUE;
+        for(int i=0;i< marks.length;i++){
+            if(min>this.marks[i]){
+                min=this.marks[i];
             }
         }
         return min;
     }
 
     public int getAverage(){
-        return TotalMarks()/marks.length;
-    }
+        return TotalMarks() / marks.length;
+   }
 
-    public int getPassCount(){
+   public  int getPassCount(){
         int count=0;
-        for(int i=0;i<marks.length;i++){
-            if(50<=marks[i]){
+        for(int i=0;i<this.marks.length;i++){
+            if(this.marks[i] >= 50) {
                 count++;
             }
         }
         return count;
-    }
-
+   }
 }
