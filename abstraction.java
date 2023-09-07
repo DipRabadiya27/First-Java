@@ -1,10 +1,10 @@
 public class abstraction {
     public static void main(String[] args) {
         Horse horse = new Horse();
-        // horse.walk();
-        // Chicken chicken = new Chicken();
-        // chicken.walk();
-        // horse.eat();
+        horse.walk();
+        Chicken chicken = new Chicken();
+        chicken.walk();
+        horse.eat();
 
     }
 }
