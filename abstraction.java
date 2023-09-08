@@ -19,7 +19,7 @@ abstract class Animal {
     }
     
 }
-
+ 
 class Horse extends Animal{
     Horse() {
         System.out.println("Created a Horse");
