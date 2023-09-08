@@ -8,7 +8,7 @@ public class abstraction {
 
     }
 }
-
+  
 abstract class Animal {
     abstract void walk();
     Animal(){
