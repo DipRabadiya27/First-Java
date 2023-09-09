@@ -3,7 +3,7 @@ public class bank {
         System.out.println("Hello");
     }
 
-    class S{
+class S{
         int name;
     }
 }
