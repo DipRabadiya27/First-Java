@@ -2,6 +2,8 @@ package ArrayList;
 import java.util.ArrayList;
 import java.util.Collections;
 
+// import java.util.*; all package
+
 public class A1 {
     public static void main(String[] args) {
         // Integer | Float | String | boolean
