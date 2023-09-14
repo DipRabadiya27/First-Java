@@ -20,9 +20,7 @@ public class LL2 {
         }
         System.out.println("null");
 
-        
         list.remove(3);
         System.out.println(list);
-
     }
 }

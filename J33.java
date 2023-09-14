@@ -4,7 +4,7 @@ public class J33 {
     public static void main(String args[]){
         int arr[]= {1,2,3,4,5,6};
         int n= arr.length;
-        int d=3;
+        int d=100;
         d = d%n;
         for(int i=1;i<=d;i++){
             int t=arr[0];

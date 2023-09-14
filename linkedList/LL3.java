@@ -1,20 +1,20 @@
 package linkedList;
 import java.util.LinkedList;
 
-public class LL1 {
+public class LL3 {
 
     Node head;
     private int size;
 
-    LL1() {
+    LL3() {
         this.size=0;
     }
 
     class Node{
-        String data;
+        int data;
         Node next;
 
-        Node(String data) {
+        Node(int data) {
             this.data=data;
             this.next=null;
             size++;
@@ -22,7 +22,7 @@ public class LL1 {
     }
     
     //add - first
-    public void addFirst(String data) {
+    public void addFirst(int data) {
         Node newNode = new Node(data);
         if(head == null) {
             head = newNode;
@@ -34,8 +34,8 @@ public class LL1 {
     }
 
     //add - last
-    public void addLast(String data) {
-        Node newNode = new Node(data);
+    public void addLast(int i) {
+        Node newNode = new Node(i);
         if(head == null) {
             head = newNode;
             return;
@@ -100,27 +100,22 @@ public class LL1 {
         return size;
     }
 
+    //reverse
+    public void reverseIterate() {
+        Node prevNode = head;
+        Node currNode = head.next;
+        
+
+
+    }
+
     public static void main(String[] args) {
-        LL1 list = new LL1();
-        list.addFirst("a");
-        list.addFirst("is");
+        LL3 list = new LL3();
+        list.addLast(1);
+        list.addLast(2);
+        list.addLast(3);
+        list.addLast(4);
         list.printList();
-
-        list.addLast("list");
-        list.printList();
-
-        list.addFirst("this");
-        list.printList();
-
-        list.deleteFirst();
-        list.printList();
-
-        list.deleteLast();
-        list.printList();
-
-        System.out.println(list.getSize());
-
-        list.addFirst("This");
-        System.out.println(list.getSize());
+        
     }
 }

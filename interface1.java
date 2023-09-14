@@ -3,7 +3,7 @@ interface Animal {
     public void walk();
 }
 
-interface Herbivore {
+interface Herbivore extends Animal {
     
 }
 
