@@ -20,6 +20,7 @@ public class J24 {
                 max3 = arr[i];
             }
         }
+        System.out.println(max2);
         System.out.println(max3);
     }
 }
