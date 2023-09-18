@@ -1,3 +1,4 @@
+package String;
 public class s5 {
     public static void main(String[] args){
         StringBuilder sb = new StringBuilder("Hello");
