@@ -7,7 +7,7 @@ public class r9 {
         if(i>=s.length()/2){
             return true;
         }
-        if(s[i] != [s.length()-i-1]){
+        if(s.charAt(i) != s.charAt(s.length()-i-1)){
             return false;
         } else {
         return rev(i+1,s);
@@ -15,7 +15,7 @@ public class r9 {
     }
 
     public static void main(String[] args) {
-        String s="MADAM";
-        rev(0,s);
+        String s="madan";
+        System.out.println(rev(0,s));
     }
 }
