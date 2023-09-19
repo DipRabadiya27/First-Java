@@ -8,10 +8,6 @@ public class equals {
         String name1 = "Dip";
         String name2 = "Dip";
 
-        if(name1 == name2) {
-            System.out.println("Strings are equal");
-        } else {
-            System.out.println("String are not equal");
-        }
+        
     }
 }
