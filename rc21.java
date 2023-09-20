@@ -15,7 +15,7 @@ public class rc21 {
         towerOfHanoi(n-1, helper, src, dest);
     }
     public static void main(String args[]) {
-        int n = 10;
+        int n = 3;
         towerOfHanoi(n, "S", "H", "D");
         System.out.println(count);
     }
