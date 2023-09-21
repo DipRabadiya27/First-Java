@@ -1,4 +1,4 @@
-package String;
+package String.leetcode;
 
 public class ipaddress {
     public static void main(String[] args) {

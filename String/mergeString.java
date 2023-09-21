@@ -2,8 +2,8 @@ package String;
 
 public class mergeString {
     public static void main(String[] args) {
-        String s = "hello";
-        String s1 = "world";
+        String s = "Dpaaia";
+        String s1 = "iRbdy";
         String s2 = "";
 
         char[] c = s.toCharArray();
@@ -14,7 +14,7 @@ public class mergeString {
         char i=0;
         char j=0;
 
-        while (i<n && j<n1){
+        while (i<=n && j<n1){
             s2 += c[i];
             s2 += c1[j];
             i++;
