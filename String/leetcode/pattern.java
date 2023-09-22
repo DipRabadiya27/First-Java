@@ -19,6 +19,6 @@ public class pattern {
             }
             System.out.println();
             x+=2;
-    }
+        }
     }
 }

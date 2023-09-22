@@ -21,7 +21,5 @@ public class s2 {
         } else {
             System.out.println("String are not equal");
         }
-
     }
-
 }

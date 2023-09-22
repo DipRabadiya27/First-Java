@@ -14,5 +14,7 @@ public class J16 {
             ind++;
         }
         System.out.println(Arrays.toString(arr3));
-    }   
+    }
+     
+    }
 }
