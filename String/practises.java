@@ -3,6 +3,9 @@ package String;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Base64.Decoder;
+import java.math.RoundingMode;  
+import java.text.DecimalFormat;  
 
 // public class practises {
 //     public static void main(String[] args) {
@@ -50,52 +53,56 @@ import java.util.List;
 // }
 
 public class practises {
+  /**
+   * @param args
+   */
   public static void main(String[] args) {
-    String text = "  this  is  a sentence  ";
+  //   String text = "  this  is  a sentence  ";
 
-    System.out.println(reorderSpaces(text));
-  }
+  //   System.out.println(reorderSpaces(text));
+  // }
 
-  private static String reorderSpaces(String text) {
-    if (!text.contains(" ")) return text;
-    int spaces = 0;
-    for (int i = 0; i < text.length(); i++) if (text.charAt(i) == ' ') spaces++;
-    List<String> wordList = new ArrayList<>();
-    int pointer;
-    for (int i = 0; i < text.length(); i++) {
-      if (text.charAt(i) != ' ') {
-        pointer = i;
-        while (pointer < text.length() && text.charAt(pointer) != ' ') {
-          pointer++;
-        }
-        wordList.add(text.substring(i, pointer));
-        i = pointer;
-      }
+  // private static String reorderSpaces(String text) {
+  //   if (!text.contains(" ")) return text;
+  //   int spaces = 0;
+  //   for (int i = 0; i < text.length(); i++) if (text.charAt(i) == ' ') spaces++;
+  //   List<String> wordList = new ArrayList<>();
+  //   int pointer;
+  //   for (int i = 0; i < text.length(); i++) {
+  //     if (text.charAt(i) != ' ') {
+  //       pointer = i;
+  //       while (pointer < text.length() && text.charAt(pointer) != ' ') {
+  //         pointer++;
+  //       }
+  //       wordList.add(text.substring(i, pointer));
+  //       i = pointer;
+  //     }
+  //   }
+  //   System.out.println(wordList);
+  //   StringBuilder sb = new StringBuilder();
+  //   if (wordList.size() == 1) {
+  //     sb.append(wordList.get(0));
+  //     while (spaces != 0) {
+  //       sb.append(" ");
+  //       spaces--;
+  //     }
+  //   } else {
+  //     int requiredSpace = spaces / (wordList.size() - 1);
+  //     for (String str : wordList) {
+  //       sb.append(str);
+  //       int appendedSpace = 0;
+  //       while (spaces != 0 && appendedSpace != requiredSpace) {
+  //         sb.append(" ");
+  //         spaces--;
+  //         appendedSpace++;
+  //       }
+  //     }
+  //   }
+  //   while (spaces != 0) {
+  //     sb.append(" ");
+  //     spaces--;
+  //   }
+  //   return sb.toString();
+  // double sum = 0;
     }
-    System.out.println(wordList);
-    StringBuilder sb = new StringBuilder();
-    if (wordList.size() == 1) {
-      sb.append(wordList.get(0));
-      while (spaces != 0) {
-        sb.append(" ");
-        spaces--;
-      }
-    } else {
-      int requiredSpace = spaces / (wordList.size() - 1);
-      for (String str : wordList) {
-        sb.append(str);
-        int appendedSpace = 0;
-        while (spaces != 0 && appendedSpace != requiredSpace) {
-          sb.append(" ");
-          spaces--;
-          appendedSpace++;
-        }
-      }
-    }
-    while (spaces != 0) {
-      sb.append(" ");
-      spaces--;
-    }
-    return sb.toString();
-}
 }
