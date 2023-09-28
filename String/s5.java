@@ -1,6 +1,6 @@
 package String;
 public class s5 {
-    public static void main(String[] args){
+    public static void main(Strings[] args){
         StringBuilder sb = new StringBuilder("Hello");
 
         for(int i=0; i<sb.length()/2; i++){

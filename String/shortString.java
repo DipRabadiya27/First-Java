@@ -3,7 +3,7 @@ package String;
 import java.util.Arrays;
 
 public class shortString {
-    public static void main(String[] args) {
+    public static void main(Strings[] args) {
         String name = "DipRabadiya";
         char[] s = name.toCharArray();
 

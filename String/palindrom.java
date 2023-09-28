@@ -1,7 +1,7 @@
 package String;
 
 public class palindrom {
-    public static void main(String[] args) {
+    public static void main(Strings[] args) {
         String s = "madam";
         int left = 0;
         int right = s.length()-1;

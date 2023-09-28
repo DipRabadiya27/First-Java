@@ -56,7 +56,7 @@ public class practises {
   /**
    * @param args
    */
-  public static void main(String[] args) {
+  public static void main(Strings[] args) {
   //   String text = "  this  is  a sentence  ";
 
   //   System.out.println(reorderSpaces(text));

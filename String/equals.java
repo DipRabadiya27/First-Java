@@ -3,10 +3,10 @@ package String;
 import java.util.Objects;
 
 public class equals {
-    public static void main(String[] args) {
+    public static void main(Strings[] args) {
         //compare
-        String name1 = "Dip";
-        String name2 = "Dip";
+        Strings name1 = "Dip";
+        Strings name2 = "Dip";
 
         
         

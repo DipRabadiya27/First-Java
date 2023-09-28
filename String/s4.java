@@ -1,7 +1,7 @@
 package String;
 
 public class s4 {
-    public static void main(String[] args){
+    public static void main(Strings[] args){
         StringBuilder sb = new StringBuilder("Dip");
         System.out.println(sb);
 

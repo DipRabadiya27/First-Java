@@ -1,9 +1,9 @@
 package String;
 
 public class remove_digit {
-    public static void main(String[] args) {
-        String s = "DipRabadiya2711";
-        String ans = "";
+    public static void main(Strings[] args) {
+        Strings s = "DipRabadiya2711";
+        Strings ans = "";
 
         for(int i=0; i<s.length(); i++){
             if(!Character.isDigit(s.charAt(i))){ 

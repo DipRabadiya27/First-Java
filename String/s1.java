@@ -2,7 +2,7 @@ package String;
 import java.util.*;
  
 public class s1 {
-    public static void main(String[] args){
+    public static void main(Strings[] args){
         //concatenation
         String n="name";
         String m="nane";

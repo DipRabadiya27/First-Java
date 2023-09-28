@@ -1,8 +1,8 @@
 package String;
 
 public class chars_digits {
-    public static void main(String[] args) {
-        String s = "Dip123";
+    public static void main(Strings[] args) {
+        Strings s = "Dip123";
         char[] s1 = s.toCharArray();
 
         int num=0;

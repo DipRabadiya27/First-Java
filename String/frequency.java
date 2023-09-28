@@ -1,8 +1,8 @@
 package String;
 
 public class frequency {
-    public static void main(String[] args) {
-        String s = "Dip Rabadiya";
+    public static void main(Strings[] args) {
+        Strings s = "Dip Rabadiya";
         // s=s.trim();
         int[] arr = new int[s.length()];
         char c[] = s.toCharArray();

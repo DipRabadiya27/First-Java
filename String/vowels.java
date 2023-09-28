@@ -1,9 +1,9 @@
 package String;
 
 public class vowels {
-    public static void main(String[] args) {
-        String s = "DipRabadiya";
-        String s1 = "";
+    public static void main(Strings[] args) {
+        Strings s = "DipRabadiya";
+        Strings s1 = "";
 
         for(int i=0; i<s.length(); i++){
             char c = s.charAt(i);

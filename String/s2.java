@@ -2,7 +2,7 @@ package String;
 
  
 public class s2 {
-    public static void main(String[] args){
+    public static void main(Strings[] args){
         //compare
         String name1 = "Dip";
         String name2 = "Dip";
