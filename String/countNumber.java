@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class countNumber {
     public static void main(Strings[] args) {
-        Strings name="My name is Dip";
+        String name="My name is Dip";
         int count=1;
         for(int i=0;i<name.length();i++){
             if(name.charAt(i) == ' '){

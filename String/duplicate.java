@@ -2,7 +2,7 @@ package String;
 
 public class duplicate {
     public static void main(Strings[] args) {
-        Strings str = "naman is a naman";
+        String str = "naman is a naman";
         int arr[] = new int[128];
         int n = str.length();
 

@@ -99,7 +99,6 @@ public class Strings {
         getShortestPath(path);
 
         String ss = "HelloWorld";
-        //subString
         System.out.println(ss.substring(0,5));
         subString(ss, 0, 5);
 

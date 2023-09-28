@@ -11,7 +11,7 @@ public class reverseWord {
     }
 }
     public static void main(Strings[] args) {
-    Strings s = "Hello My name is Dip Rabadiya";
+    String s = "Hello My name is Dip Rabadiya";
     char[] arr = s.toCharArray();
     int left=0;
     int right=0;
@@ -24,6 +24,6 @@ public class reverseWord {
     }
     right = arr.length-1;
     reverseWord(arr, left, right);
-    System.out.println(new Strings(arr));
+    System.out.println(new String(arr));
     }
 }
