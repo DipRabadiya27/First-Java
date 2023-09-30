@@ -54,7 +54,6 @@ import java.text.DecimalFormat;
 
 public class practises {
   /**
-   * @param args
    */
   public static void main(Strings[] args) {
   //   String text = "  this  is  a sentence  ";
@@ -104,5 +103,10 @@ public class practises {
   //   }
   //   return sb.toString();
   // double sum = 0;
+    String[] word = {"cat","bt","hat","tree"};
+    String chars = "atach";
+    char[] ch = chars.toCharArray();
+    System.out.println(ch);
+    
     }
 }
