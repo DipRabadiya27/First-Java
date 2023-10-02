@@ -3,7 +3,7 @@ package String;
 import java.util.HashMap;
 
 public class remove_dublicate {
-    public static void main(Strings[] args) {
+    public static void main(String[] args) {
         String s = "dipdip";
         char[] arr = s.toCharArray();
         HashMap<Character,Integer> map = new HashMap<>();
