@@ -1,27 +1,23 @@
 package Stack;
 import java.util.Stack;
-//02-08-2023
-//Find min in O(1) from stack.
+
 public class get_min {
     static int min = Integer.MAX_VALUE;
     static Stack<Integer> stack = new Stack<>();
 
     public static void main(String[] args) {
-        push(10);
-        push(20);
-        pop();
-        push(45);
         push(5);
+        push(2);
         pop();
         System.out.println(getMin());
     }
-    
+
     public static void push(int val) {
         if(val <= min){
-            stack.add(min);
+            stack.push(min);
             min = val;
         }
-        stack.add(val);
+        stack.push(val);
     }
 
     public static void pop() {
@@ -29,10 +25,6 @@ public class get_min {
             min = stack.pop();
         }
     }
-
-    // public static int top() {
-    //     return stack.peek();
-    // }
 
     public static int getMin() {
         return min;
