@@ -4,7 +4,7 @@ import java.util.*;
 
 public class palindromee {
     public static void main(String[] args) {
-        String s = "namam";
+        String s = "naman";
         Stack<Character> stack = new Stack<>();
         for (int i = 0; i < s.length(); i++) {
             stack.push(s.charAt(i));

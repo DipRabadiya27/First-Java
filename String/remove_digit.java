@@ -1,7 +1,7 @@
 package String;
 
 public class remove_digit {
-    public static void main(Strings[] args) {
+    public static void main(String[] args) {
         String s = "DipRabadiya2711";
         String ans = "";
 

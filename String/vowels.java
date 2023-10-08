@@ -1,7 +1,7 @@
 package String;
 
 public class vowels {
-    public static void main(Strings[] args) {
+    public static void main(String[] args) {
         String s = "DipRabadiya";
         String s1 = "";
 

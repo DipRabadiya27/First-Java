@@ -10,7 +10,7 @@ public class reverseWord {
         right--;
     }
 }
-    public static void main(Strings[] args) {
+    public static void main(String[] args) {
     String s = "Hello My name is Dip Rabadiya";
     char[] arr = s.toCharArray();
     int left=0;

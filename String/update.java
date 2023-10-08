@@ -3,7 +3,7 @@ package String;
 import java.util.Arrays;
 
 public class update {
-    public static void main(Strings[] args) {
+    public static void main(String[] args) {
         String name="Dip";
         char[] n1=name.toCharArray();
         int n=n1.length;
@@ -12,7 +12,6 @@ public class update {
                 n1[i]='P';
             }
         }
-        String s=new String(n1);
-        System.out.println(s);
+        System.out.println(new String(n1));
     }
 }
