@@ -1,7 +1,7 @@
 package String;
 
 public class world_pelindrome {
-    public static void main(Strings[] args) {
+    public static void main(String[] args) {
         String str= "msm sas dip";
         char arr[] = str.toCharArray();
         int n = arr.length;
