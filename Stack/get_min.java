@@ -14,7 +14,6 @@ public class get_min {
         push(1);
         push(1);
         pop();
-        System.out.println(stack);
         System.out.println(getMin());
     }
 
@@ -34,25 +33,44 @@ public class get_min {
 
     // public static int getMin() {
     // return min;
-    // }
+    // } 
 
     private static void push(int value) {
-        stack.push(value);
-        if (minstack.isEmpty()) {
-            minstack.push(value);
-        } else if (minstack.peek() >= value) {
-            minstack.push(value);
-        }
-    }
-
-    private static int getMin() {
-        return minstack.peek();
-    }
-
-    private static void pop() {
-        int temp = stack.pop();
-        if (temp == minstack.peek()) {
-            minstack.pop();
-        }
+    stack.push(value);
+    if (minstack.isEmpty()) {
+        minstack.push(value);
+    } else if (minstack.peek() >= value) {
+        minstack.push(value);
     }
 }
+
+private static int getMin() {
+    return minstack.peek();
+}
+
+private static void pop() {
+    int temp = stack.pop();
+    if (temp == minstack.peek()) {
+        minstack.pop();
+    }
+}
+}
+// private static void push(int value) {
+//     stack.push(value);
+//     if (minstack.isEmpty()) {
+//         minstack.push(value);
+//     } else if (minstack.peek() >= value) {
+//         minstack.push(value);
+//     }
+// }
+
+// private static int getMin() {
+//     return minstack.peek();
+// }
+
+// private static void pop() {
+//     int temp = stack.pop();
+//     if (temp == minstack.peek()) {
+//         minstack.pop();
+//     }
+// }

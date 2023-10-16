@@ -2,27 +2,34 @@ package Stack;
 
 import java.util.*;
 
+import String.shortString;
+
 public class infix_to_prefix {
     public static void main(String[] args) {
-        String prefix = "((a+b)*c)";
-        Stack<String> stack = new Stack<>();
-        Stack<String> stack1 = new Stack<>();
-        for (int i = 0; i < prefix.length(); i++) {
-            if (prefix.charAt(i) == '(') {
-                continue;
-            } if (prefix.charAt(i) == ')'){
-                    for (int j = 0; j < prefix.length(); j++) {
-                        if (prefix.charAt(i) == '+' || prefix.charAt(i) == '-' || prefix.charAt(i) == '*' || prefix.charAt(i) == '/') {
-                            String first = stack.pop();
-                            String second = stack.pop();
-                            String inx = prefix.charAt(i) + second + first;
-                            stack.push(inx);
-                        } else {
-                            stack.push(String.valueOf(prefix.charAt(i)));
-                        }
+        String path = "/home/";
+        Stack<String> st = new Stack<>();
+        int p1 = 0;
+        int p2 = 0;
+        while (p2 <= path.length()) {
+            if (p2 < path.length() && path.charAt(p2) == '/' || p2 == path.length()) {
+                String word = path.substring(p1, p2);
+                if (word.equals(".") || word.equals("")) {
+                    p2++;
+                    p1 = p2;
+                    continue;
+                } else if (word.equals("..")) {
+                    if (!st.isEmpty()) {
+                        st.pop();
                     }
+                } else {
+                    st.add(word + "/");
                 }
+                p2++;
+                p1 = p2;
+            } else {
+                p2++;
             }
-            System.out.println(stack.pop());
         }
+        System.out.println(st);
     }
+}

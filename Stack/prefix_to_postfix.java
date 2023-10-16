@@ -8,8 +8,7 @@ public class prefix_to_postfix {
         Stack<String> stack = new Stack<>();
 
         for (int i = prefix.length() - 1; i >= 0; i--) {
-            if (prefix.charAt(i) == '+' || prefix.charAt(i) == '-' || prefix.charAt(i) == '*'
-                    || prefix.charAt(i) == '/') {
+            if (prefix.charAt(i) == '+' || prefix.charAt(i) == '-' || prefix.charAt(i) == '*' || prefix.charAt(i) == '/') {
                 String first = stack.pop();
                 String second = stack.pop();
                 String inx =first +  second + prefix.charAt(i);
