@@ -56,6 +56,7 @@ public class circualar_queue {
             }
             return arr[front];
         }
+        
     }
 
     public static void main(String[] args) {

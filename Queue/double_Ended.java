@@ -2,7 +2,7 @@ package Queue;
 
 import java.util.Arrays;
 
-public class deque {
+public class double_Ended {
     static int[] queue = new int[5];
     static int leftR = -1, rightR = queue.length;
     static int left = -1, right = queue.length;
