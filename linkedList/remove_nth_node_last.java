@@ -2,7 +2,6 @@ package linkedList;
 
 import java.util.LinkedList;
 
-
 public class remove_nth_node_last {
 
     Node head;
@@ -104,16 +103,16 @@ public class remove_nth_node_last {
 
     // reverse
     public void reverseIterate() {
-        if(head == null || head.next == null){
+        if (head == null || head.next == null) {
             return;
         }
         Node prevNode = head;
         Node currNode = head.next;
-        while(currNode != null){
+        while (currNode != null) {
             Node nextNode = currNode.next;
             currNode.next = prevNode;
 
-            //update
+            // update
             prevNode = currNode;
             currNode = nextNode;
         }
@@ -122,7 +121,7 @@ public class remove_nth_node_last {
     }
 
     public Node reverseRecursive(Node head) {
-        if(head == null || head.next == null){
+        if (head == null || head.next == null) {
             return head;
         }
         Node newHead = reverseRecursive(head.next);
@@ -132,26 +131,26 @@ public class remove_nth_node_last {
         return newHead;
     }
 
-    public Node removeNthFromEnd(int n){
-        if(head.next == null){
+    public Node removeNthFromEnd(int n) {
+        if (head.next == null) {
             return null;
         }
 
         int size = 0;
         Node curr = head;
-        while (curr != null){
-            curr=curr.next;
+        while (curr != null) {
+            curr = curr.next;
             size++;
         }
 
-        if(n==size){
+        if (n == size) {
             return head.next;
         }
 
-        int indexToSearch = size-n;
+        int indexToSearch = size - n;
         Node prev = head;
-        int i=1;
-        while(i<indexToSearch){
+        int i = 1;
+        while (i < indexToSearch) {
             prev = prev.next;
             i++;
         }
@@ -160,16 +159,67 @@ public class remove_nth_node_last {
         return head;
     }
 
+    public Node findMiddle(Node node){
+        Node hare = head;
+        Node turtle = head;
+
+        while(hare.next != null && hare.next.next != null) {
+            hare = hare.next.next;
+            turtle = turtle.next;
+        }
+        return turtle;
+    }
+
+    public boolean isPalindrome(){
+        if(head == null || head.next == null){
+            return true;
+        }
+
+        Node middle = findMiddle(head); //1sthalfend
+        Node secondHalfStart = reverseRecursive(middle.next);
+
+        Node firstHalfStart = head;
+        while(secondHalfStart != null) {
+            if(firstHalfStart.data != secondHalfStart.data) {
+                return false;
+            }
+            firstHalfStart = firstHalfStart.next;
+            secondHalfStart = secondHalfStart.next;
+        }
+
+        return true;
+    }
+
+    public boolean hasCycle(){
+        if(head == null){
+            return false;
+        }
+        Node hare = head;
+        Node turtle = head;
+
+        while(hare != null && hare.next != null){
+            hare = hare.next.next;
+            turtle = turtle.next;
+
+            if(hare == turtle){
+                return true;
+            }
+        }
+        return false;
+    }
+
     public static void main(String[] args) {
         remove_nth_node_last list = new remove_nth_node_last();
         list.addLast(1);
         list.addLast(2);
         list.addLast(3);
-        list.addLast(4);
-        //list.addLast(5);
+        list.addLast(2);
+        list.addLast(1);
         list.printList();
 
-        list.removeNthFromEnd(2);
+        list.removeNthFromEnd(3);
         list.printList();
+        System.out.println(list.isPalindrome());
+        System.out.println(list.hasCycle());
     }
 }

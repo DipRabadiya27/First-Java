@@ -1,49 +1,86 @@
 package Queue;
 
-import java.util.Arrays;
-
 public class double_Ended {
-    static int[] queue = new int[5];
-    static int leftR = -1, rightR = queue.length;
-    static int left = -1, right = queue.length;
-
+    static int[] queue = new int[4];
+    static int front = -1;
+    static int rear = -1;
     public static void main(String[] args) {
-        leftEnque(10);
-        leftEnque(20);
-        leftEnque(30);
-        //leftEnque(40);
-        //leftEnque(50);
-        //leftEnque(60);
-        rightEnque(60);
-        rightEnque(50);
-        print();
+        push_back(10);
+        push_back(50);
+        push_back(20);
+        pop_back();
+        pop_front();
+        push_back(70);
+        push_back(100);
+        display();
+        System.out.println(size());
     }
 
-    private static void rightEnque(int value) {
-        if(right==left){
-            System.out.println("queue is full");
-        }
-        right--;
-        queue[right]=value;
-    }
-
-    private static void leftEnque(int value) {
-        if (left == queue.length - 1) {
-            System.out.println("Queue is full");
+    public static void push_back(int val){
+        if(isFull()){
+            System.out.println("Queue is full !!");
             return;
         }
-        left++;
-        queue[left]=value;
+        rear++;
+        queue[rear] = val;
     }
 
-    private static void print() {
-        if (left == right) {
-            System.out.println("Queue is empty");
+    public static void push_front(int val){
+        if(isFull()){
+            System.out.println("Queue is full !!");
             return;
         }
-        for (int i = leftR + 1; i <= right; i++) {
-            System.out.print(queue[i] + " ");
+        int i;
+        for (i = rear; i > front ; i--) {
+            queue[i+1] = queue[i];
         }
-        System.out.println();
+        queue[i+1] = val;
+        rear = rear + 1;
+    }
+
+    public static boolean isFull(){
+        return rear == queue.length-1;
+    }
+
+    public static void display(){
+        if(isEmpty()){
+            System.out.println("Queue is Empty !!");
+            return;
+        }
+        for (int i = (front+1); i <= rear; i++) {
+            System.out.print(queue[i]+" ");
+        }
+    }
+
+    public static void pop_front(){
+        if(isEmpty()){
+            System.out.println("Queue is Empty !!");
+            return;
+        }
+        int i;
+        for (i = front+1; i <rear ; i++) {
+            queue[i] = queue[i+1];
+        }
+        if(front==rear){
+            front = rear = -1;
+        }
+        rear--;
+    }
+    public static void pop_back(){
+        if(isEmpty()){
+            System.out.println("Queue is Empty !!");
+            return;
+        }
+        rear--;
+        if(front==rear){
+            front = rear = -1;
+        }
+    }
+    public static boolean isEmpty(){
+        return rear == -1;
+    }
+
+    public static int size(){
+        return rear - front;
     }
 }
