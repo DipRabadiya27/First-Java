@@ -1,7 +1,7 @@
 package Recursion;
 
 //fibonacci 
-public class r10 {
+public class fibonacci {
     static int fib(int n){
         if(n<=1){
             return n;

@@ -1,7 +1,7 @@
 package Recursion;
 
 //print sum of first N number
-public class r6 {
+public class sum {
     // parameter 
     // static void printSum(int i,int sum) {
     //     if(i < 1){

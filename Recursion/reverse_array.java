@@ -3,7 +3,7 @@ package Recursion;
 import java.util.Arrays;
 
 //reverse arr
-public class r8 {
+public class reverse_array {
 
     public static void rev(int i,int arr[], int n) {
         if(i>=n/2) {

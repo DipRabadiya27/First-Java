@@ -14,12 +14,12 @@ public class reverse_Kth_item {
         queue.add(5);
         queue.add(6);
         Deque<Integer> extraQueue = new ArrayDeque<Integer>();
-        for (int i = 0; i <k; i++) {
+        for (int i = 0; i < k; i++) {
             extraQueue.add(queue.removeFirst());
         }
-        while (!extraQueue.isEmpty()){
+        while (!extraQueue.isEmpty()) {
             queue.addFirst(extraQueue.removeFirst());
         }
-        System.out.println("before update :"+queue);
+        System.out.println("before update :" + queue);
     }
 }

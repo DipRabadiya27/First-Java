@@ -2,7 +2,7 @@ package Recursion;
 import java.util.*;
 
 //A string is palidrom or not
-public class r9 {
+public class palindrome {
     static boolean rev(int i,String s){
         if(i>=s.length()/2){
             return true;

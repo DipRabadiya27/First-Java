@@ -1,40 +1,8 @@
 package linkedList;
 
-public class circularLinkedList {
-    public static void main(String[] args) {
-        LinkedList list = new LinkedList();
-        list.insert(10);
-        list.insert(20);
-        list.insert(30);
-        list.insert(40);
-        list.insert(50);
-        System.out.println(list.countLoop(list.head));
-        list.print();
-        System.out.println();
-        System.out.println(list.hasCycle());
-        list.removeCycle();
-        System.out.println(list.hasCycle());
-
-        Node head = new Node(1);
-        Node temp = new Node(2);
-        head.next = temp;
-        head.next.next=new Node(3);
-        head.next.next.next=temp;
-        
-
-    }
-}
-
-class LinkedList {
-    Node head;
-    Node temp;
-
-    // Node tail;
-    LinkedList() {
-        head = null;
-        temp = null;
-        // tail = null;
-    }
+public class remove_cycle {
+    static Node head;
+    static Node temp;
 
     public void insert(int data) {
         Node node = new Node(data);
@@ -78,7 +46,7 @@ class LinkedList {
         return count;
     }
 
-    public void print() {
+    public static  void print() {
         Node temp = head;
         do {
             System.out.print(temp.data + " ");
@@ -88,7 +56,7 @@ class LinkedList {
         System.out.print(temp.next.data + " ");
     }
 
-    public boolean hasCycle() {
+    public static boolean hasCycle() {
         if (head == null) {
             return false;
         }
@@ -106,7 +74,7 @@ class LinkedList {
         return false;
     }
 
-    public  void removeCycle() {
+    public static void removeCycle() {
         //detect cycle
         Node hare = head;
         Node turtle = head;
@@ -135,6 +103,17 @@ class LinkedList {
 
         //remove cycle -> last.next = null
         prev.next = null;
+    }
+    public static void main(String[] args) {
+        head = new Node(1);
+        Node temp = new Node(2);
+        head.next = temp;
+        head.next.next=new Node(3);
+        head.next.next.next=temp;
+        print();
+        System.out.println(hasCycle());
+        removeCycle();
+        System.out.println(hasCycle());
     }
 }
 

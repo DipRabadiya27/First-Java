@@ -1,13 +1,14 @@
 package Recursion;
 
-//print n to 1 
-public class r3 {
+//print 1 to n by bactracking
+public class printNthTime2 {
     public static void print(int i,int n) {
         if(i < 1){
             return;
         }
+        
+        print(i-1,n);  
         System.out.println(i);
-        print(i-1,n);
     }
 
     public static void main(String[] args) {

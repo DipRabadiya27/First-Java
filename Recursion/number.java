@@ -1,17 +1,17 @@
 package Recursion;
 
-//print 5 time name
-public class r1 {
-    static void print(int i,int n) {
-        if(i>n){
+//print 1 to n
+public class number {
+    public static void print(int i,int n) {
+        if(i > n){
             return;
         }
-        System.out.println("Name");
+        System.out.println(i);
         print(i+1,n);
     }
 
     public static void main(String[] args) {
-        int n=5;
+        int n=10;
         print(1,n);
     }
 }

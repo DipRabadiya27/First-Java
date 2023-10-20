@@ -69,11 +69,11 @@ public class stack_using_2queue {
 
     public static void main(String[] args) {
         Stack s = new Stack();
-        s.push(10);
-        s.push(20);
-        s.push(30);
+        s.push(1);
+        s.push(2);
         s.pop();
-        s.push(30);
+        s.pop();
+        s.isEmpty();
 
         while (!s.isEmpty()) {
             System.out.println(s.pop());

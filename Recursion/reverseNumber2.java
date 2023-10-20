@@ -1,13 +1,13 @@
 package Recursion;
 
-//print 1 to n
-public class r2 {
+//print n to 1 by bactracking
+public class reverseNumber2 {
     public static void print(int i,int n) {
         if(i > n){
             return;
         }
-        System.out.println(i);
         print(i+1,n);
+        System.out.println(i);
     }
 
     public static void main(String[] args) {

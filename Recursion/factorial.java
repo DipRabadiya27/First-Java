@@ -1,7 +1,7 @@
 package Recursion;
 
 //print factorial of n
-public class r7 {
+public class factorial {
     // parameter 
     // static void printFactorial(int i,int multiply) {
     //     if(i < 1){
@@ -23,6 +23,5 @@ public class r7 {
         int factorial=1;
         // printFactorial(n,factorial);
         System.out.println(printFactorial(n));
-        
     }
 }
