@@ -7,7 +7,7 @@ import java.util.Collections;
 public class A1 {
     public static void main(String[] args) {
         // Integer | Float | String | boolean
-        ArrayList<Integer> list = new ArrayList<Integer>();
+        ArrayList<Integer> list = new ArrayList<>();
         // ArrayList<String> list2 = new ArrayList<String>();
         // ArrayList<Boolean> list3 = new ArrayList<Boolean>();
 
