@@ -5,17 +5,14 @@ public class linklist {
     public static void main(String[] args) {
         LinkedL list = new LinkedL();
 
+        list.print();
         list.insert(10);
         list.insert(20);
-        list.insert(40);
-        list.insert(70);
         list.insert(30);
-        list.insert(90);
-        list.insert(80);
-        list.insert(0);
-  //      list.update(20,200);
-        list.delete(30);
+        list.insert(40);
+        list.insert(50);
         list.print();
+        list.find(30);
     }
 }
 
@@ -35,7 +32,7 @@ class LinkedL{
             tail = node;
         }else{
             tail.next = node;
-            tail = node;
+            tail = tail.next;
         }
     }
 
@@ -49,7 +46,23 @@ class LinkedL{
         }
     }
 
+    public void find(int value) {
+        Node temp = head;
+        while (temp != null){
+            if(temp.data == value){
+                System.out.println("present");
+                return;
+            }
+            temp = temp.next;
+        }
+        System.out.println("not present");
+    }
+
     public void print() {
+        if(head == null){
+            System.out.println("LinkedList is empty");
+            return;
+        }
         Node temp = head;
         while (temp != null){
             System.out.print(temp.data + " ");
