@@ -92,7 +92,6 @@ public class Reverse_linklist {
             lastNode = lastNode.next;
             secondLast = secondLast.next;
         }
-
         secondLast.next = null;
     }
 
