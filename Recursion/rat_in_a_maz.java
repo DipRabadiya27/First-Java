@@ -58,7 +58,10 @@ public class rat_in_a_maz {
     public static void main(String[] args) {
 
         int n = 4;
-        int[][] a = { { 1, 0, 0, 0 }, { 1, 1, 0, 1 }, { 1, 1, 0, 0 }, { 0, 1, 1, 1 } };
+        int[][] a = { { 1, 0, 0, 0 },
+                      { 1, 1, 0, 1 },
+                      { 1, 1, 1, 0 }, 
+                      { 0, 1, 1, 1 } };
 
         Solution obj = new Solution();
         ArrayList<String> res = obj.findPath(a, n);

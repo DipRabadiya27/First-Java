@@ -112,8 +112,8 @@ public class remove_cycle {
         head.next.next.next=temp;
         print();
         System.out.println(hasCycle());
-        removeCycle();
-        System.out.println(hasCycle());
+        // removeCycle();
+        // System.out.println(hasCycle());
     }
 }
 
